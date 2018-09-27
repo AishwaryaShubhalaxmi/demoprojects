@@ -1,0 +1,41 @@
+package com.jdbc.client;
+
+import java.util.Scanner;
+
+import com.jdbc.entity.Employee;
+import com.jdbc.service.ServiceImpl;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter your choice: 1)insert 2)select 3)update 4)delete");
+	int choice=sc.nextInt();
+	ServiceImpl serv= new ServiceImpl();
+	switch(choice) {
+	case 1:
+		System.out.println("Enter the number of employees");
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++) {
+			Employee e= new Employee();
+			System.out.println("Enter name");
+			String name=sc.next();
+			e.setName(name);
+			System.out.println("Enter id");
+			int id= sc.nextInt();
+			e.setId(id);
+			System.out.println("Enter salary");
+			Double salary=sc.nextDouble();
+			e.setSalary(salary);
+			serv.insertion(id, name, salary);
+			System.out.println("Data inserted successfully");
+		}
+		
+	case 2:
+		 
+	}
+	
+
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.bank.entity;
+
+import java.util.Date;
+
+public class Transactions {
+	private int transaction_id;
+	private int account_no;
+	private int ben_acc_no;
+	private double tran_amount;
+	private Date date_of_tranfer;
+	private String tran_details;
+	
+	public Transactions(int transaction_id, int account_no, int ben_acc_no, double tran_amount, Date date_of_tranfer,String tran_details) {
+		super();
+		this.transaction_id = transaction_id;
+		this.account_no = account_no;
+		this.ben_acc_no = ben_acc_no;
+		this.tran_amount = tran_amount;
+		this.date_of_tranfer = date_of_tranfer;
+		this.tran_details=tran_details;
+	}
+     public int getTransaction_id() {
+		return transaction_id;
+	}
+	public void setTransaction_id(int transaction_id) {
+		this.transaction_id = transaction_id;
+	}
+	public int getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(int account_no) {
+		this.account_no = account_no;
+	}
+	public int getBen_acc_no() {
+		return ben_acc_no;
+	}
+	public void setBen_acc_no(int ben_acc_no) {
+		this.ben_acc_no = ben_acc_no;
+	}
+	public double getTran_amount() {
+		return tran_amount;
+	}
+	public void setTran_amount(double tran_amount) {
+		this.tran_amount = tran_amount;
+	}
+	public Date getDate_of_tranfer() {
+		return date_of_tranfer;
+	}
+	public void setDate_of_tranfer(Date date_of_tranfer) {
+		this.date_of_tranfer = date_of_tranfer;
+	}
+	public String getTranDetails() {
+		return tran_details;
+	}
+	public void setTranDetails(String tran_details) {
+		this.tran_details=tran_details;
+	}
+
+}

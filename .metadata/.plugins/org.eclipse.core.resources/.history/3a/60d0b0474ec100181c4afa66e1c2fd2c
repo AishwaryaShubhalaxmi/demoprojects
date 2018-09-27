@@ -1,0 +1,43 @@
+package com.jdbc.client;
+
+import java.util.Scanner;
+
+import com.jdbc.dao.DaoImpl;
+import com.jdbc.entity.Streams;
+import com.jdbc.entity.Students;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	
+	System.out.println("enter streamName");
+	String streamName=sc.next();
+	DaoImpl dao= new DaoImpl();
+	String streamid=dao.getStreamId(streamName);
+	System.out.println(streamid);
+	/*System.out.println("enter your choice: 1)insert into students 2)getStudentCount");
+	int choice=sc.nextInt();
+*/	
+	/*switch(choice) {
+	case 1:
+		
+		System.out.println("enter the number of students");
+		int n= sc.nextInt();
+		for(int i=0;i<n;i++) {
+			Students s= new Students();
+			Streams stream=new Streams();
+			System.out.println("enter id");
+			int id=sc.nextInt();
+			s.setStudent_id(id);
+			System.out.println("enter name");
+			String name=sc.next();
+			s.setStudent_name(name);
+			
+			
+			}
+	}*/
+
+	}
+
+}

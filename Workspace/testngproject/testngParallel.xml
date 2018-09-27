@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests"> 
+ <test name="IETest">
+ <parameter name="browsers" value="Internet Explorer"/>
+ <classes>
+ <class name="testngproject.TestngParallel" />
+ </classes>
+  </test>
+  <test name="ChromeTest">
+  <parameter name="browsers" value="Chrome" />
+  <classes>
+  <class name="testngproject.TestngParallel" />
+  </classes>
+  </test>
+  
+</suite>

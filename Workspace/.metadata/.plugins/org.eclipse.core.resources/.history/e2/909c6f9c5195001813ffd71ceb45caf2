@@ -1,0 +1,14 @@
+package com.mindtree.service;
+
+import java.util.Scanner;
+
+import com.mindtree.dao.DaoImpl;
+
+public class ServiceImpl {
+	DaoImpl dao= new DaoImpl();
+	public void update(String surname, String student_no) {
+	dao.updateData(surname, student_no);
+	System.out.println("Updated");
+	 
+ }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.bookmyroom.util.Util&apos; to &apos;Reusable&apos;&#x0D;&#x0A;- Original project: &apos;bookmyroom&apos;&#x0D;&#x0A;- Original element: &apos;com.bookmyroom.util.Util&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bookmyroom.util.Reusable&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Util&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.bookmyroom.util{Util.java[Util" matchStrategy="1" name="Reusable" qualified="false" references="true" similarDeclarations="false" stamp="1536048836621" textual="false" version="1.0"/>
+</session>

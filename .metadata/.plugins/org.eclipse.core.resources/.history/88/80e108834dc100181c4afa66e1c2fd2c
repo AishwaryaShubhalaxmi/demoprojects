@@ -1,0 +1,40 @@
+package com.jdbc.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.jdbc.entity.Students;
+import com.jdbc.utility.Utility;
+
+public class DaoImpl {
+	Utility util=new Utility();
+	Connection con;
+	public String getStreamId(String streamName) {
+		con=util.openConnection();
+		String query="select stream_id from streams where stream_name=?";
+		String stream_Id="";
+		try {
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setString(1,streamName );
+			ResultSet rs=ps.executeQuery(query);
+			while(rs.next()) {
+			stream_Id=rs.getString(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return stream_Id;
+	}
+	/*public boolean insertStudents(ArrayList<Students> arr) {
+	con=util.openConnection();
+	
+	String query1="insert into students values(?,?,?)";
+	
+	
+		
+	}*/
+
+}

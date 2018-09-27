@@ -1,0 +1,11 @@
+package com.jdbc.service;
+
+import com.jdbc.dao.DaoImpl;
+
+public class ServiceImpl {
+	DaoImpl dao= new DaoImpl();
+	public void insertion(int id, String name, double salary) {
+      dao.insertData(id, name, salary);		
+	}
+
+}

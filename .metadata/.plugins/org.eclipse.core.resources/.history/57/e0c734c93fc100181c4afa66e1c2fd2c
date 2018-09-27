@@ -1,0 +1,23 @@
+package com.jdbc.service;
+
+import java.util.ArrayList;
+
+import com.jdbc.dao.DaoImpl;
+import com.jdbc.entity.Employee;
+
+public class ServiceImpl {
+	DaoImpl dao= new DaoImpl();
+	public void insertion(int id, String name, double salary) {
+      dao.insertData(id, name, salary);		
+	}
+	
+	/*public boolean insertion1(ArrayList<Employee> employee) {
+		dao.insertData1(employee);
+		return true;
+	}
+*/	
+	public void selection() {
+		dao.selectData();
+	}
+
+}

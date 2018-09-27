@@ -1,0 +1,41 @@
+package com.bank.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.bank.utility.Utility;
+
+public class DaoImpl {
+	Utility  util= new Utility();
+	Connection con;
+	public void insertCustomers(int customer_id,String f_name, String l_name,String username, String password) {
+         con=util.openConnection();
+         String query="insert into customers values(?,?,?,?,?)";
+         try {
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1, customer_id);
+			ps.setString(2, f_name);
+			ps.setString(3, l_name);
+			ps.setString(4, username);
+			ps.setString(5, password);
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+         
+	}
+   public void insertAccounts(int account_no,double balance, int customer_id) {
+	     con=util.openConnection();
+	     String query="insert into accounts values(?,?,?)";
+	     try {
+			PreparedStatement ps= con.prepareStatement(query);
+			ps.setInt(1, account_no);
+			ps.setDouble(2, balance);
+			ps.setInt(3, customer_id);
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+   }
+}

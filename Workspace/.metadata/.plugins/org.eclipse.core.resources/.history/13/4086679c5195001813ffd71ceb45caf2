@@ -1,0 +1,26 @@
+package com.mindtree.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.mindtree.entity.Student;
+import com.mindtree.util.Utility;
+
+public class DaoImpl {
+    Student s=new Student();
+    public void updateData(String surname, String student_no ) {
+	Utility util=new Utility();  //create object of util class
+	Connection con=util.getConnection(); //use the object to get connection
+	try {
+		PreparedStatement ps=con.prepareStatement("update students set surname=? where student_no=?");
+		ps.setString(1,s.getSurname() );
+		ps.setString(2,s.getStudent_no());
+		
+		ps.executeUpdate();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}

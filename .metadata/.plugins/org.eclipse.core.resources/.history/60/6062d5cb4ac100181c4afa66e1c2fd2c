@@ -1,0 +1,17 @@
+package com.jdbc.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import com.jdbc.entity.Students;
+import com.jdbc.utility.Utility;
+
+public class DaoImpl {
+	Utility util=new Utility();
+	Connection con;
+	public boolean insertStudents(ArrayList<Students> arr) {
+	con=util.openConnection();
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+package com.mindtree.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Utility {
+	
+    private static Connection con;
+	public Connection getConnection() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		}catch(ClassNotFoundException e) {
+			System.out.println("Problem in driver--Import jar");
+			try {
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","Welcome123");
+			}catch(SQLException e1) {
+				System.out.println("Failed to establish connection--Invalid database name,id or password");
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Exception handled");
+		}
+		return con;
+	}
+	
+	public void closeConnection() {
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Failed to close connection");
+		}
+	}
+}

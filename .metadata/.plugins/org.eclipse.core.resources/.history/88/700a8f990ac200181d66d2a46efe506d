@@ -1,0 +1,83 @@
+package com.bank.client;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+
+import com.bank.entity.Accounts;
+import com.bank.entity.Customers;
+import com.bank.entity.Transactions;
+import com.bank.service.ServImpl;
+
+public class MainClass {
+     public static void main(String[] args) {
+    	 Scanner sc= new Scanner(System.in);
+    	 System.out.println("enter your choice: 1)insert into customers 2)insert into accounts 3)fetch balance 4) generate report");
+    	 int choice=sc.nextInt();
+    	 ServImpl serv= new ServImpl();
+    	 switch(choice) {
+    	 case 1:
+    		 System.out.println("enter the number of customers");
+    		 int n= sc.nextInt();
+    		 for(int i=0;i<n;i++) {
+    			 Customers c=new Customers();
+    			 System.out.println("enter id");
+    			 int id=sc.nextInt();
+    			 c.setId(id);
+    			 System.out.println("enter first name");
+    			 String f_name=sc.next();
+    			 c.setFirst_name(f_name);
+    			 System.out.println("enter last name");
+    			 String l_name=sc.next();
+    			 c.setLast_name(l_name);
+    			 System.out.println("enter username");
+    			 String username=sc.next();
+    			 c.setUsername(username);
+    			 System.out.println("enter password");
+    			 String password=sc.next();
+    			 c.setPassword(password);
+    			 serv.insertion1(id, f_name, l_name, username, password);
+    			 System.out.println("data successfully inserted");
+    			}
+    		 break;
+    	 case 2:
+    		 System.out.println("enter number of accounts");
+    		 int n1= sc.nextInt();
+    		 for(int i=0;i<n1;i++) {
+    			 Accounts a= new Accounts();
+    			 System.out.println("enter account no");
+    			 int account_no=sc.nextInt();
+    			 a.setAccount(account_no);
+    			 System.out.println("enter balance");
+    			 double balance=sc.nextDouble();
+    			 a.setBalance(balance);
+    			 System.out.println("enter customer_id");
+    			 int customer_id=sc.nextInt();
+    			 a.setCustomer_id(customer_id);
+    			 serv.insertion2(account_no, balance, customer_id);
+    			 System.out.println("data inserted into accounts table");
+    	    }
+    		 break;
+    	 case 3:
+    		 System.out.println("enter first name");
+    		 String f_name1=sc.next();
+    		 serv.fetchbalance(f_name1);
+    		 System.out.println("successfully fetched");
+    		 break;
+    		
+    	 case 4:
+    		 System.out.println("enter date in yyyy-MM-dd");
+    		 ArrayList<Transactions> arr= new ArrayList<Transactions>();
+    		 String date_of_transfer=sc.next();
+    		 arr=serv.getTranDetails(date_of_transfer);
+    		 for(Transactions t:arr) {
+    			 System.out.println(t.getTransaction_id()+ " " + t.getAccount_no() + " " + t.getBen_acc_no()+ " "+ t.getTran_amount() + " "+ t.getDate_of_tranfer()+ " "+ t.g);
+    		 }
+    		
+    	 }
+    	 
+    	
+     }
+}

@@ -1,0 +1,82 @@
+package com.bank.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+
+import com.bank.entity.Transactions;
+import com.bank.utility.Utility;
+
+public class DaoImpl {
+	Utility  util= new Utility();
+	Connection con;
+	public void insertCustomers(int customer_id,String f_name, String l_name,String username, String password) {
+         con=util.openConnection();
+         String query="insert into customers values(?,?,?,?,?)";
+         try {
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1, customer_id);
+			ps.setString(2, f_name);
+			ps.setString(3, l_name);
+			ps.setString(4, username);
+			ps.setString(5, password);
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+         
+	}
+   public void insertAccounts(int account_no,double balance, int customer_id) {
+	     con=util.openConnection();
+	     String query="insert into accounts values(?,?,?)";
+	     try {
+			PreparedStatement ps= con.prepareStatement(query);
+			ps.setInt(1, account_no);
+			ps.setDouble(2, balance);
+			ps.setInt(3, customer_id);
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+   }
+   
+   public void fetchBalance(String first_name) {
+	   con=util.openConnection();
+	   String query="select accounts.account_no,accounts.balance,accounts.customer_id from accounts inner join customers on accounts.customer_id=customers.id where customers.first_name=?";
+	   
+	try {
+		PreparedStatement ps = con.prepareStatement(query);
+		ps.setString(1, first_name);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next()) {
+			System.out.println("account_no: " + rs.getInt(1)+ " balance: " + rs.getDouble(2) + " customer_id: " + rs.getInt(3));
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+       
+   }
+   public ArrayList<Transactions> getDetails(String Date_of_transfer){
+	   con=util.openConnection();
+	   String query="select * from transactions where tran_date=?";
+	   Transactions t=null; 
+	   ArrayList<Transactions> arr= new ArrayList<Transactions>();
+	   try {
+	   PreparedStatement ps=con.prepareStatement(query);
+	   ps.setString(1, Date_of_transfer);
+	   ResultSet rs=ps.executeQuery();
+	   while(rs.next()) {
+		   t=new Transactions(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),rs.getString(5),rs.getString(6));
+		   arr.add(t);
+	   }
+	   }
+	   catch(SQLException e){
+		   e.printStackTrace();
+		   
+	   }
+	   return arr;
+   }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.map.service.ServImpl&apos; to &apos;CompareByDoj&apos;&#x0D;&#x0A;- Original project: &apos;hashmapCampusMind&apos;&#x0D;&#x0A;- Original element: &apos;com.map.service.ServImpl&apos;&#x0D;&#x0A;- Renamed element: &apos;com.map.service.CompareByDoj&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ServImpl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.map.service{ServImpl.java[ServImpl" matchStrategy="1" name="CompareByDoj" qualified="false" references="true" similarDeclarations="false" stamp="1533605232045" textual="false" version="1.0"/>
+</session>

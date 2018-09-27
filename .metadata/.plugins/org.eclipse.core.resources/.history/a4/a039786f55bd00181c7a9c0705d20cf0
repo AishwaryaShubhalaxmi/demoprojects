@@ -1,0 +1,44 @@
+/*package com.bookmyroom.util;
+
+import javax.swing.JFrame;
+import javax.swing.JProgressBar;
+
+
+public class ProgressBar extends JFrame {
+	
+	static JProgressBar jb;    
+	int i=0,num=0;
+	
+	ProgressBar(){
+	jb=new JProgressBar(0,100);    
+	jb.setBounds(100,100,500,100);   
+	jb.setValue(10);    
+	jb.setStringPainted(true);    
+	add(jb);    
+	setSize(1000,250);    
+	setLayout(null);    
+	}    
+	public void iterate(){    
+	while(i<=100){    
+	 jb.setValue(i);    
+	  i=i+1;    
+	  try{Thread.sleep(150);}catch(Exception e){}    
+	}    
+	}   
+	
+	public static void setProgress(int val) {
+		
+		jb.setValue(val);   
+	    
+	}
+	
+	public static void progressBar() {
+		ProgressBar m=new ProgressBar();    
+	    m.setVisible(true);    
+	   // m.iterate(); 
+	    
+	}
+	
+	
+}
+*/

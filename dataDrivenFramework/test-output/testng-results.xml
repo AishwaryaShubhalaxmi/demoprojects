@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="84529" started-at="2018-08-29T09:11:06Z" finished-at="2018-08-29T09:12:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="84529" started-at="2018-08-29T09:11:06Z" finished-at="2018-08-29T09:12:31Z">
+      <class name="com.ddf.test.TestLogin">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="openBrowser" is-config="true" duration-ms="18105" started-at="2018-08-29T09:11:07Z" finished-at="2018-08-29T09:11:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="loginFunc" duration-ms="4692" started-at="2018-08-29T09:11:25Z" data-provider="Excel" finished-at="2018-08-29T09:11:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="closeBrowser" is-config="true" duration-ms="1007" started-at="2018-08-29T09:11:30Z" finished-at="2018-08-29T09:11:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="openBrowser" is-config="true" duration-ms="13170" started-at="2018-08-29T09:11:31Z" finished-at="2018-08-29T09:11:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="loginFunc" duration-ms="10992" started-at="2018-08-29T09:11:44Z" data-provider="Excel" finished-at="2018-08-29T09:11:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demo1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ad123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="closeBrowser" is-config="true" duration-ms="964" started-at="2018-08-29T09:11:55Z" finished-at="2018-08-29T09:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="openBrowser" is-config="true" duration-ms="15873" started-at="2018-08-29T09:11:56Z" finished-at="2018-08-29T09:12:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="loginFunc" duration-ms="9643" started-at="2018-08-29T09:12:12Z" data-provider="Excel" finished-at="2018-08-29T09:12:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demo2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[a1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="closeBrowser" is-config="true" duration-ms="927" started-at="2018-08-29T09:12:22Z" finished-at="2018-08-29T09:12:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="openBrowser" is-config="true" duration-ms="7221" started-at="2018-08-29T09:12:23Z" finished-at="2018-08-29T09:12:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="loginFunc" duration-ms="131" started-at="2018-08-29T09:12:30Z" data-provider="Excel" finished-at="2018-08-29T09:12:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ddf.test.TestLogin@6e0e048a]" name="closeBrowser" is-config="true" duration-ms="807" started-at="2018-08-29T09:12:30Z" finished-at="2018-08-29T09:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.ddf.test.TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

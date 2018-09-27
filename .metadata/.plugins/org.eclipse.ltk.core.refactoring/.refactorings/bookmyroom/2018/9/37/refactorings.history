@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.bookmyroom.pages.SearchHotels&apos; to &apos;SearchHotelsPage&apos;&#x0D;&#x0A;- Original project: &apos;bookmyroom&apos;&#x0D;&#x0A;- Original element: &apos;com.bookmyroom.pages.SearchHotels&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bookmyroom.pages.SearchHotelsPage&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SearchHotels&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.bookmyroom.pages{SearchHotels.java[SearchHotels" matchStrategy="1" name="SearchHotelsPage" qualified="false" references="true" similarDeclarations="false" stamp="1536540323208" textual="false" version="1.0"/>
+</session>

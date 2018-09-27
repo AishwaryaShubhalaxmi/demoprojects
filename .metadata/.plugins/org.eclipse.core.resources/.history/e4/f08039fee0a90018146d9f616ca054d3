@@ -1,0 +1,34 @@
+package com.mindtree.windowhandle;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MultipleWindows {
+	static WebDriver driver;
+ 
+	public static void main(String[] args) {
+	WaitCommands wc= new WaitCommands();
+   String path="C:\\Users\\M1046926\\Downloads\\chromedriver_win32\\chromedriver.exe";
+   System.setProperty("webdriver.chrome.driver", path);   
+   driver= new ChromeDriver();
+	driver.manage().window().maximize();
+    driver.get("https://www.hdfcbank.com/");
+	WebElement ele= driver.findElement(By.xpath("//a[@class='homeloginbtn']"));
+	ele.click();
+     System.out.println(driver.getWindowHandle()); //returns the parent window handle
+	 for(String win: driver.getWindowHandles()) {     //returns all the window handles
+	   driver.switchTo().window(win);
+	   }
+	   
+	  // driver.findElement(By.xpath("//a[@class='btn btn-default redBtn']")).click(); //performs operation on child window
+	   driver.getTitle();
+	   System.out.println(driver.getWindowHandle());
+   
+		
+
+	}
+}

@@ -1,0 +1,51 @@
+package com.jdbc.client;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.jdbc.dao.DaoImpl;
+import com.jdbc.entity.Employee;
+import com.jdbc.service.ServiceImpl;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter your choice: 1)insert 2)select 3)update 4)delete");
+	int choice=sc.nextInt();
+	ServiceImpl serv= new ServiceImpl();
+	switch(choice) {
+	case 1:
+		System.out.println("Enter the number of employees");
+		int n=sc.nextInt();
+		ArrayList<Employee> arr= new ArrayList<Employee>();
+		for(int i=0;i<n;i++) {
+			Employee e= new Employee();
+			System.out.println("Enter id");
+			int id= sc.nextInt();
+			e.setId(id);
+			System.out.println("Enter name");
+			String name=sc.next();
+			e.setName(name);
+			System.out.println("Enter salary");
+			double salary=sc.nextDouble();
+			e.setSalary(salary);
+			/*serv.insertion(id, name, salary);
+			System.out.println("Data inserted successfully");*/
+			arr.add(e);}
+			//serv.insertion1(employee);
+			DaoImpl dao=new DaoImpl();
+			dao.insertData1(arr);
+		    break;
+		
+	case 2:
+		 //serv.selection();
+		ArrayList<Employee> arr1= new ArrayList<Employee>();
+		DaoImpl dao1=new DaoImpl();
+		dao1.insertData1(arr1);
+	}
+	
+
+	}
+
+}

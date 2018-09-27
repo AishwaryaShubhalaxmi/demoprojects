@@ -1,0 +1,40 @@
+package com.bank.client;
+
+import java.util.Scanner;
+
+import com.bank.entity.Customers;
+import com.bank.service.ServImpl;
+
+public class MainClass {
+     public static void main(String[] args) {
+    	 Scanner sc= new Scanner(System.in);
+    	 System.out.println("enter your choice: 1)insert into customers 2)insert into accounts 3)fetch balance 4) generate report");
+    	 int choice=sc.nextInt();
+    	 ServImpl serv= new ServImpl();
+    	 switch(choice) {
+    	 case 1:
+    		 System.out.println("enter the number of customers");
+    		 int n= sc.nextInt();
+    		 for(int i=0;i<n;i++) {
+    			 Customers c=new Customers();
+    			 System.out.println("enter id");
+    			 int id=sc.nextInt();
+    			 c.setId(id);
+    			 System.out.println("enter first name");
+    			 String f_name=sc.next();
+    			 c.setFirst_name(f_name);
+    			 System.out.println("enter last name");
+    			 String l_name=sc.next();
+    			 c.setLast_name(l_name);
+    			 System.out.println("enter username");
+    			 String username=sc.next();
+    			 c.setUsername(username);
+    			 System.out.println("enter password");
+    			 String password=sc.next();
+    			 c.setPassword(password);
+    			 serv.insertion1(id, f_name, l_name, username, password);
+    			 System.out.println("data successfully inserted");
+    		 }
+    	 }
+     }
+}

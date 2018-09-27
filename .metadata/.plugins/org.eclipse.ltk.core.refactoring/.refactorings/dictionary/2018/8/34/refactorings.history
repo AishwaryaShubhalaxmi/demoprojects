@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.dictionary.meaning&apos; to &apos;Arraylist/src&apos;&#x0D;&#x0A;- Original project: &apos;dictionary&apos;&#x0D;&#x0A;- Destination element: &apos;Arraylist/src&apos;&#x0D;&#x0A;- Original element: &apos;dictionary/src/com.dictionary.meaning&apos;" description="Copy package" destination="=Arraylist/src" element1="/src&lt;com.dictionary.meaning" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1535080417577" version="1.0"/>
+</session>

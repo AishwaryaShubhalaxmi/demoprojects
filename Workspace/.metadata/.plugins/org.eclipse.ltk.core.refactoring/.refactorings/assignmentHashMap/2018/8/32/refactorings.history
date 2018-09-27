@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.map.service.ServiceImpl&apos; to &apos;SortBbyKey&apos;&#x0D;&#x0A;- Original project: &apos;assignmentHashMap&apos;&#x0D;&#x0A;- Original element: &apos;com.map.service.ServiceImpl&apos;&#x0D;&#x0A;- Renamed element: &apos;com.map.service.SortBbyKey&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ServiceImpl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.map.service{ServiceImpl.java[ServiceImpl" matchStrategy="1" name="SortBbyKey" qualified="false" references="true" similarDeclarations="false" stamp="1533447275251" textual="false" version="1.0"/>
+</session>

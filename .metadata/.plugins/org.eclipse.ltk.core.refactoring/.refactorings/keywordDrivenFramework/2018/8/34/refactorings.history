@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;keywordDrivenFramework&apos;&#x0D;&#x0A;- Original project: &apos;keywordDrivenFramework&apos;&#x0D;&#x0A;- Original element: &apos;keywordDrivenFramework/src/main/java/com.sdet.xyz.keywordDrivenFramework&apos;" description="Delete element" element1="/src\/main\/java&lt;com.sdet.xyz.keywordDrivenFramework" element2="/src\/main\/java&lt;com.sdet.xyz" element3="/src\/main\/java&lt;com.sdet" element4="/src\/main\/java&lt;com" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1535088268657" subPackages="false" version="1.0"/>
+</session>

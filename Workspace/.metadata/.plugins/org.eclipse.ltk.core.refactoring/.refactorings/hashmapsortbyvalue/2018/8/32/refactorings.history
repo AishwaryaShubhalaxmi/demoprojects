@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sortbyvalue.Entity&apos; to &apos;Student&apos;&#x0D;&#x0A;- Original project: &apos;hashmapsortbyvalue&apos;&#x0D;&#x0A;- Original element: &apos;sortbyvalue.Entity&apos;&#x0D;&#x0A;- Renamed element: &apos;sortbyvalue.Student&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Entity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sortbyvalue{Entity.java[Entity" matchStrategy="1" name="Student" qualified="false" references="true" similarDeclarations="false" stamp="1533530208352" textual="false" version="1.0"/>
+</session>
